@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import { useLocation } from 'react-router-dom'
+import Navbar from './NavBar';
 
 const MpesaPayment = () => {
 
@@ -11,6 +12,14 @@ const{product} = useLocation().state || {};
 //no.  .message
 const[ phone, setPhone] = useState('');
 const[message,setMessage] = useState('');
+
+
+
+
+  // specify the loaction of the image
+  const img_url = "https://muthwa.pythonanywhere.com/static/images/"
+
+
 
 
 //create t a function to handle payment.
@@ -41,6 +50,7 @@ const submit = async (e) => {
 
   return (
     <div className='row justify-content-center mt-3'>
+      <Navbar/>
     <h1 className='text-danger'>Lipa na Mpesa</h1>
     <div className="col-md-6 card shadow p-3">
         <b className='text-success'>{message}</b>
@@ -49,6 +59,7 @@ const submit = async (e) => {
     <form onSubmit={submit}>
         {/* <label>Price of product</label> */}
         <h4>Price of the Product: <span className='text-primary'>{product.fertilizer_price}</span></h4>
+        <h4><span><img src={img_url + product.fertilizer_image} className="product_img mt-4" alt="" /></span></h4>
         <input 
         type="number"
         value={phone}

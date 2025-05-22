@@ -24,17 +24,31 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarcontents">
           <ul className="navbar-nav me-auto">
             <li className="nav-item">
-              <b><Link to="/" className="nav-link">View Machines</Link></b>
+              <b><Link to="/" className="nav-link">Machines</Link></b>
             </li>
             <li className="nav-item">
-              <b><Link to="/fetchfertilizers" className="nav-link">View Fertilizers</Link></b>
+              <b><Link to="/fetchfertilizers" className="nav-link">Fertilizers</Link></b>
             </li>
-            
+            <li className="nav-item">
+              <b><Link to="/addmachines" className="nav-link">Add machinery</Link></b>
+            </li>
+            <li className="nav-item">
+              <b><Link to="/addfertilizers" className="nav-link">Add fertilizer</Link></b>
+            </li>
+
           </ul>
 
           {/* Authorization Links (Aligned Right) */}
           <ul className="navbar-nav ms-auto">
+          <li className="nav-item"></li>
           <li className="nav-item">
+              <b><Link to="/chatbot" className="nav-link">
+              
+                       <img src="images/AI.png" alt="" height='50px' width='60px' />
+
+              </Link></b>
+            </li>
+            <li className="nav-item">
               <b><Link to="/about" className="nav-link">About us</Link></b>
             </li>
             <li className="nav-item">
@@ -43,6 +57,7 @@ const Navbar = () => {
             <li className="nav-item">
               <Link to="/signup" className="btn btn-success">Join our community</Link>
             </li>
+            
             {/* <li className="nav-item">
               <Link to="/signup" className="btn btn-primary">Sign UP</Link>
             </li> */}

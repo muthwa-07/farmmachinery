@@ -1,8 +1,11 @@
+
 import { useState } from "react"
 import { useNavigate } from "react-router-dom";
 
 //IMPORTATION OF AXIOS
 import axios from "axios";
+import Navbar from "./NavBar";
+import Footer from "./Footer";
 
 const SignIn = () => {
 
@@ -65,7 +68,7 @@ const submit = async (e) => {
 
   return (
     <div className='row justify-content-center mt-5'>
-      
+      <Navbar/>
       <div className="card shadow col-md-6">
       <h2>Sign in</h2>
       {loading}
@@ -100,11 +103,12 @@ const submit = async (e) => {
 
 
 
-    <button type='submit' className='btn btn-success'>sign in</button>  <br />
+    <button type='submit' className='btn btn-success'>sign in</button> <br /> <br />
       </form>
      
 
       </div>
+      <Footer/>
     </div>
   )
 }

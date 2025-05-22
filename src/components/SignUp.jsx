@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom'
 
 import {useState}from 'react'
@@ -5,6 +6,7 @@ import {useState}from 'react'
 //impotation of axios
 import axios from 'axios';
 import Navbar from './NavBar';
+import Footer from './Footer';
 
 
 const SignUp = () => {
@@ -117,6 +119,7 @@ const submit = async (e) =>{
         </form>
         {/* <p>Already have an account? <Link to={'/signin'}>SignIn</Link></p>  */}
       </div>
+      <Footer/>
     </div>
   )
 }
